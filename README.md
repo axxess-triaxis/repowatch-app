@@ -1,5 +1,7 @@
 # RepoWatch GitHub App
 
+![RepoWatch: repo governance, audit, vigilance](docs/assets/repowatch-banner.png)
+
 A GitHub App that runs [RepoWatch](https://github.com/axxess-triaxis/RepoWatch) governance audits on the repositories you grant it, and keeps the results in one **"RepoWatch audit"** issue.
 
 RepoWatch looks for the failure modes AI-assisted teams actually hit:

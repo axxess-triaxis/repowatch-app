@@ -32,6 +32,7 @@ Leave every other permission at **No access**.
 
 Create the App. On its settings page:
 
+1. Under **Display information**, upload `docs/assets/repowatch-logo-512.png` as the logo and set **Badge background color** to `#0A0F1E`.
 1. Note the **Client ID** (it starts with `Iv`).
 2. Under **Private keys**, select **Generate a private key**. A `.pem` file downloads. Keep it out of any git folder.
 
