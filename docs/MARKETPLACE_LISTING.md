@@ -26,7 +26,20 @@ It runs on install, weekly, and whenever someone comments `/repowatch run`. It i
 - Support: https://github.com/axxess-triaxis/repowatch-app/issues
 - Documentation: https://github.com/axxess-triaxis/repowatch-app#readme
 
+**Brand assets** (in `docs/assets/`):
+- **Logo:** `repowatch-logo-512.png` (512x512). `repowatch-logo-200.png` is the 200x200 minimum size.
+- **Feature card and banner:** `repowatch-banner.png` (2000x1050).
+- **Colours:**
+
+  | Use | Hex |
+  |---|---|
+  | Background / badge | `#0A0F1E` |
+  | Shield | `#111A33` |
+  | Accent gold | `#F2B544` |
+  | Cream | `#E9E4D2` |
+  | Wordmark gold | `#9A6A0D` |
+  | Light background | `#F4F1E9` |
+
 **Still needed before submitting:**
-- A logo, at least 200x200 PNG.
-- A feature card.
 - 1 to 5 screenshots, taken from a real report issue made during setup step 5.
+- If GitHub's feature-card form asks for a background colour rather than an image, use `#0A0F1E` with the 512px logo.
