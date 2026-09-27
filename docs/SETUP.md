@@ -4,7 +4,7 @@ These steps need an account owner. They create credentials and cloud resources, 
 
 ## 1. Register the GitHub App
 
-Go to GitHub, then **Organization settings → Developer settings → GitHub Apps → New GitHub App**, under `axxess-triaxis`.
+Go to GitHub, then **Developer settings → GitHub Apps → New GitHub App**. For a personal account like `axxess-triaxis`, that's **Settings → Developer settings**. For an organization, it's **Organization settings → Developer settings**.
 
 | Field | Value |
 |---|---|
@@ -75,7 +75,7 @@ Then delete the downloaded `.pem`, or move it somewhere safe outside any reposit
 
 ## 5. Try it
 
-Install the App on `axxess-triaxis`, granting the `.github` repository and one or two others. Within a few minutes a **RepoWatch audit** issue should appear in `.github`.
+Install the App on `axxess-triaxis`, granting the `.github` repository and one or two others. If there's no `.github` repository, grant exactly one repository, and the report goes there. Within a few minutes a **RepoWatch audit** issue should appear.
 
 Then check the following:
 

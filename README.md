@@ -17,7 +17,7 @@ RepoWatch looks for the failure modes AI-assisted teams actually hit:
 
 - **When it runs:** when you install it, when you grant it more repositories, every Monday at 03:30 UTC, and whenever someone with write access comments `/repowatch run` on the report issue.
 - **What it audits:** only the repositories you grant it, and not archived repositories or forks.
-- **Where the report goes:** your org's `.github` repository if the App can reach it, or the single repository you granted if you granted only one. If you grant several repositories and not `.github`, the App has nowhere unambiguous to post, so it posts nothing. Grant it `.github` to receive the report.
+- **Where the report goes:** your org's or account's `.github` repository if the App can reach it, or the single repository you granted if you granted only one. If you grant several repositories and not `.github`, the App has nowhere unambiguous to post, so it posts nothing. Grant it `.github` to receive the report.
 
 ## Permissions
 
