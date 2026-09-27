@@ -1,0 +1,6 @@
+# Runtime dependencies bundled into the Lambda package (scripts/build_lambda.py).
+# Pinned to releases at least 7 days old when chosen (2026-09-27).
+# boto3 is not listed: the AWS Lambda Python runtime provides it.
+repowatch @ git+https://github.com/axxess-triaxis/RepoWatch@42a6923e4d0a79ba4eb728b9447933b470cd04f8
+PyJWT==2.14.0
+cryptography==50.0.1
