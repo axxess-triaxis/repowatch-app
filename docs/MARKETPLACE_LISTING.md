@@ -22,8 +22,11 @@ It runs on install, weekly, and whenever someone comments `/repowatch run`. It i
 **Pricing:** Free.
 
 **Links:**
-- Privacy policy: `docs/privacy.md` (publish it with GitHub Pages and use that URL)
-- Support: https://github.com/axxess-triaxis/repowatch-app/issues
+- Privacy policy: `<Vercel production URL>/privacy` (the `repowatch-app` Vercel project serves `site/`, generated from `docs/privacy.md`)
+- Support: `<Vercel production URL>/support`, which points to https://github.com/axxess-triaxis/repowatch-app/issues
+- Homepage: `<Vercel production URL>/`
+
+After editing `README.md`, `docs/privacy.md` or `docs/support.md`, run `python scripts/build_site.py` and commit `site/`. `tests/test_site.py` fails if the site is stale.
 - Documentation: https://github.com/axxess-triaxis/repowatch-app#readme
 
 **Brand assets** (in `docs/assets/`):

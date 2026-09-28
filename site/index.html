@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RepoWatch GitHub App</title>
+<meta name="description" content="RepoWatch GitHub App: weekly governance audits for AI-assisted teams, posted as one GitHub issue.">
+<link rel="icon" type="image/png" href="/assets/repowatch-logo-200.png">
+<style>
+:root{--navy:#0A0F1E;--shield:#111A33;--gold:#F2B544;--cream:#E9E4D2;--wordmark:#9A6A0D;
+--bg:#F4F1E9;--ink:#1a1d24;--muted:#5a5f6b;--rule:#ddd6c6}
+*{box-sizing:border-box}html,body{margin:0}
+body{font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
+header{background:var(--navy);color:var(--cream)}
+.bar{max-width:880px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.bar img{width:40px;height:40px;border-radius:8px}
+.bar b{font-size:18px;color:#fff;letter-spacing:.01em}
+nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:var(--cream);text-decoration:none;font-size:15px}
+nav a:hover,nav a[aria-current]{color:var(--gold)}
+.hero{background:var(--shield);border-bottom:3px solid var(--gold)}
+.hero img{display:block;width:100%;max-width:880px;margin:0 auto;height:auto}
+main{max-width:880px;margin:0 auto;padding:28px 16px 48px}
+h1{font-size:30px;line-height:1.2;margin:0 0 14px}h2{font-size:21px;margin:32px 0 8px}
+h3{font-size:17px;margin:22px 0 6px}
+a{color:var(--wordmark)}a:hover{color:var(--navy)}
+code{font:14px ui-monospace,Consolas,monospace;background:#e8e2d3;padding:1px 5px;border-radius:4px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{background:#ebe5d6}
+ul{padding-left:22px}li{margin:3px 0}
+footer{border-top:1px solid var(--rule);color:var(--muted);font-size:14px}
+footer div{max-width:880px;margin:0 auto;padding:16px}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<img src="/assets/repowatch-logo-200.png" alt="" width="40" height="40"><b>RepoWatch</b>
+<nav><a href="/" aria-current="page">Overview</a><a href="/privacy">Privacy</a><a href="/support">Support</a><a href="https://github.com/axxess-triaxis/repowatch-app">GitHub</a></nav>
+</div></header>
+<div class="hero"><img src="/assets/repowatch-banner.png" alt="RepoWatch: repo governance, audit, vigilance" width="2000" height="1050"></div>
+<main>
+<h1>RepoWatch GitHub App</h1>
+<p>A GitHub App that runs <a href="https://github.com/axxess-triaxis/RepoWatch">RepoWatch</a> governance audits on the repositories you grant it, and keeps the results in one <strong>"RepoWatch audit"</strong> issue.</p>
+<p>RepoWatch looks for the failure modes AI-assisted teams actually hit:</p>
+<ul><li>open Dependabot alerts, kept separate from "Dependabot turned off" and "no access"</li><li>PRs open more than 10 days</li><li>merges that still carry conflict markers</li><li>recent commits with no test run behind them</li><li>possible PII in the code, always shown masked</li><li>near-duplicate repositories</li></ul>
+<h2>How it works</h2>
+<ul><li><strong>When it runs:</strong> when you install it, when you grant it more repositories, every Monday at 03:30 UTC, and whenever someone with write access comments <code>/repowatch run</code> on the report issue.</li><li><strong>What it audits:</strong> only the repositories you grant it, and not archived repositories or forks.</li><li><strong>Where the report goes:</strong> your org's or account's <code>.github</code> repository if the App can reach it, or the single repository you granted if you granted only one. If you grant several repositories and not <code>.github</code>, the App has nowhere unambiguous to post, so it posts nothing. Grant it <code>.github</code> to receive the report.</li></ul>
+<h2>Permissions</h2>
+<table><thead><tr><th>Permission</th><th>Access</th><th>Why</th></tr></thead><tbody><tr><td>Metadata</td><td>Read</td><td>List the repositories granted to the App (required by GitHub)</td></tr><tr><td>Contents</td><td>Read</td><td>Recent commits, and the file tree and files for the PII scan</td></tr><tr><td>Pull requests</td><td>Read</td><td>Find stale PRs</td></tr><tr><td>Checks</td><td>Read</td><td>See whether commits had a test run</td></tr><tr><td>Dependabot alerts</td><td>Read</td><td>Count open vulnerability alerts</td></tr><tr><td>Issues</td><td>Read and write</td><td>Create and update the single report issue, and reply to <code>/repowatch run</code></td></tr></tbody></table>
+<p>The App never writes code, never changes settings and never comments on pull requests. Its only write is the report issue and its replies.</p>
+<h2>Data handling</h2>
+<p>See <a href="/privacy">docs/privacy.md</a>. In short:</p>
+<ul><li>Code is read in memory during an audit and never stored.</li><li>The only output is the report issue in your own repository, with PII masked.</li><li>Operational logs (installation ID, repository counts, errors) are kept for 30 days in AWS CloudWatch (ap-south-1).</li><li>There's no third-party analytics.</li></ul>
+</main>
+<footer><div>RepoWatch GitHub App &middot; operated by Triaxis Ventures Private Limited &middot;
+<a href="/privacy">Privacy policy</a> &middot; <a href="/support">Support</a> &middot;
+<a href="https://github.com/axxess-triaxis/repowatch-app">Source</a></div></footer>
+</body>
+</html>

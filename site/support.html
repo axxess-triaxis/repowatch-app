@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RepoWatch: Support</title>
+<meta name="description" content="RepoWatch GitHub App: weekly governance audits for AI-assisted teams, posted as one GitHub issue.">
+<link rel="icon" type="image/png" href="/assets/repowatch-logo-200.png">
+<style>
+:root{--navy:#0A0F1E;--shield:#111A33;--gold:#F2B544;--cream:#E9E4D2;--wordmark:#9A6A0D;
+--bg:#F4F1E9;--ink:#1a1d24;--muted:#5a5f6b;--rule:#ddd6c6}
+*{box-sizing:border-box}html,body{margin:0}
+body{font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
+header{background:var(--navy);color:var(--cream)}
+.bar{max-width:880px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.bar img{width:40px;height:40px;border-radius:8px}
+.bar b{font-size:18px;color:#fff;letter-spacing:.01em}
+nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:var(--cream);text-decoration:none;font-size:15px}
+nav a:hover,nav a[aria-current]{color:var(--gold)}
+.hero{background:var(--shield);border-bottom:3px solid var(--gold)}
+.hero img{display:block;width:100%;max-width:880px;margin:0 auto;height:auto}
+main{max-width:880px;margin:0 auto;padding:28px 16px 48px}
+h1{font-size:30px;line-height:1.2;margin:0 0 14px}h2{font-size:21px;margin:32px 0 8px}
+h3{font-size:17px;margin:22px 0 6px}
+a{color:var(--wordmark)}a:hover{color:var(--navy)}
+code{font:14px ui-monospace,Consolas,monospace;background:#e8e2d3;padding:1px 5px;border-radius:4px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{background:#ebe5d6}
+ul{padding-left:22px}li{margin:3px 0}
+footer{border-top:1px solid var(--rule);color:var(--muted);font-size:14px}
+footer div{max-width:880px;margin:0 auto;padding:16px}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<img src="/assets/repowatch-logo-200.png" alt="" width="40" height="40"><b>RepoWatch</b>
+<nav><a href="/">Overview</a><a href="/privacy">Privacy</a><a href="/support" aria-current="page">Support</a><a href="https://github.com/axxess-triaxis/repowatch-app">GitHub</a></nav>
+</div></header>
+
+<main>
+<h1>RepoWatch GitHub App: Support</h1>
+<p>Open an issue at <a href="https://github.com/axxess-triaxis/repowatch-app/issues">https://github.com/axxess-triaxis/repowatch-app/issues</a>. Please don't paste tokens, private keys or unmasked personal data into an issue.</p>
+<h2>Common questions</h2>
+<p><strong>No report issue appeared.</strong> Grant the App access to your org's <code>.github</code> repository. The App posts there. If you granted exactly one repository, it posts in that one instead. With several repositories and no <code>.github</code>, there is nowhere unambiguous to post, so nothing is posted.</p>
+<p><strong>Dependabot shows "no access".</strong> The App was installed before it requested the Dependabot alerts permission, or the permission request is still pending. An org owner can accept updated permissions under <strong>Settings → GitHub Apps → RepoWatch</strong>.</p>
+<p><strong>Dependabot shows "turned off".</strong> Dependabot alerts were never enabled for that repository. Enable them under the repository's <strong>Settings → Code security</strong>.</p>
+<p><strong>Every commit shows as untested.</strong> RepoWatch only recognises check runs whose names contain <code>playwright</code> or <code>vitest</code>. Repositories that test with other tools show every commit as untested. This is a known limitation.</p>
+<p><strong>How do I re-run the audit?</strong> Comment <code>/repowatch run</code> on the report issue. Only owners, members and collaborators can trigger it.</p>
+</main>
+<footer><div>RepoWatch GitHub App &middot; operated by Triaxis Ventures Private Limited &middot;
+<a href="/privacy">Privacy policy</a> &middot; <a href="/support">Support</a> &middot;
+<a href="https://github.com/axxess-triaxis/repowatch-app">Source</a></div></footer>
+</body>
+</html>
