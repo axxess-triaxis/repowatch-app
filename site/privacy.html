@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RepoWatch: Privacy Policy</title>
+<meta name="description" content="RepoWatch GitHub App: weekly governance audits for AI-assisted teams, posted as one GitHub issue.">
+<link rel="icon" type="image/png" href="/assets/repowatch-logo-200.png">
+<style>
+:root{--navy:#0A0F1E;--shield:#111A33;--gold:#F2B544;--cream:#E9E4D2;--wordmark:#9A6A0D;
+--bg:#F4F1E9;--ink:#1a1d24;--muted:#5a5f6b;--rule:#ddd6c6}
+*{box-sizing:border-box}html,body{margin:0}
+body{font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
+header{background:var(--navy);color:var(--cream)}
+.bar{max-width:880px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.bar img{width:40px;height:40px;border-radius:8px}
+.bar b{font-size:18px;color:#fff;letter-spacing:.01em}
+nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:var(--cream);text-decoration:none;font-size:15px}
+nav a:hover,nav a[aria-current]{color:var(--gold)}
+.hero{background:var(--shield);border-bottom:3px solid var(--gold)}
+.hero img{display:block;width:100%;max-width:880px;margin:0 auto;height:auto}
+main{max-width:880px;margin:0 auto;padding:28px 16px 48px}
+h1{font-size:30px;line-height:1.2;margin:0 0 14px}h2{font-size:21px;margin:32px 0 8px}
+h3{font-size:17px;margin:22px 0 6px}
+a{color:var(--wordmark)}a:hover{color:var(--navy)}
+code{font:14px ui-monospace,Consolas,monospace;background:#e8e2d3;padding:1px 5px;border-radius:4px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{background:#ebe5d6}
+ul{padding-left:22px}li{margin:3px 0}
+footer{border-top:1px solid var(--rule);color:var(--muted);font-size:14px}
+footer div{max-width:880px;margin:0 auto;padding:16px}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<img src="/assets/repowatch-logo-200.png" alt="" width="40" height="40"><b>RepoWatch</b>
+<nav><a href="/">Overview</a><a href="/privacy" aria-current="page">Privacy</a><a href="/support">Support</a><a href="https://github.com/axxess-triaxis/repowatch-app">GitHub</a></nav>
+</div></header>
+
+<main>
+<h1>RepoWatch GitHub App: Privacy Policy</h1>
+<p>Effective 27 September 2026. Operated by Triaxis Ventures Private Limited.</p>
+<h2>What the App reads</h2>
+<p>When it runs, the App reads the following from the repositories you grant it, using GitHub's API:</p>
+<ul><li>repository metadata</li><li>open pull requests</li><li>recent commits and their check runs</li><li>Dependabot alerts</li><li>up to 80 text files per repository, for the PII pattern scan</li></ul>
+<h2>What the App stores</h2>
+<ul><li><strong>Your code:</strong> not stored. Files are read into memory during an audit and discarded when it ends.</li><li><strong>Audit results:</strong> written only to the "RepoWatch audit" issue in your own repository. Possible PII is always shown masked, for example <code>22********08</code>. We keep no copy of reports.</li><li><strong>Operational logs:</strong> your installation ID and account name, repository counts, the report repository and issue number, and error messages. They are kept for 30 days in AWS CloudWatch, in the ap-south-1 (Mumbai) region, to operate and debug the service. Logs contain no code, no file contents and no unmasked PII.</li><li><strong>Credentials:</strong> GitHub installation tokens are short-lived and held only in memory during an audit.</li></ul>
+<h2>What the App does not do</h2>
+<ul><li>It doesn't sell or share your data.</li><li>It doesn't use third-party analytics or advertising.</li><li>It doesn't send your data anywhere except GitHub's own API.</li><li>It doesn't write to your repositories, other than the report issue and its replies.</li></ul>
+<h2>Your control</h2>
+<ul><li>Change which repositories the App can reach, or uninstall it, at any time in your GitHub settings. Uninstalling stops all access immediately.</li><li>The report issue is yours to edit, close or delete.</li><li>To ask for your operational logs to be deleted before the 30 days are up, open an issue at <a href="https://github.com/axxess-triaxis/repowatch-app/issues">https://github.com/axxess-triaxis/repowatch-app/issues</a> without including sensitive details. We'll reply there.</li></ul>
+<h2>Changes</h2>
+<p>We'll update this page and its effective date if the policy changes.</p>
+</main>
+<footer><div>RepoWatch GitHub App &middot; operated by Triaxis Ventures Private Limited &middot;
+<a href="/privacy">Privacy policy</a> &middot; <a href="/support">Support</a> &middot;
+<a href="https://github.com/axxess-triaxis/repowatch-app">Source</a></div></footer>
+</body>
+</html>
