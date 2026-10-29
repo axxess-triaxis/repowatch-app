@@ -13,6 +13,18 @@ RepoWatch looks for the failure modes AI-assisted teams actually hit:
 - possible PII in the code, always shown masked
 - near-duplicate repositories
 
+## Status, checked 2026-10-29
+
+| | State |
+|---|---|
+| Webhook, audit worker, weekly schedule, AWS CDK stack | **Built** (this repo) |
+| Marketplace listing pages (landing, privacy, support) | **Live** at https://repowatch-app.vercel.app (200) |
+| AWS backend | **Not deployed.** No CloudFormation stack for it in the Triaxis AWS account (checked ap-south-1, us-east-1 and ap-southeast-2) |
+| GitHub Marketplace listing | **Draft only**, in [docs/MARKETPLACE_LISTING.md](docs/MARKETPLACE_LISTING.md) |
+
+The same checks run live today inside [PORT4LLEO](https://github.com/axxess-triaxis/port4lleo)'s
+governance audits, the governance product in the Triaxis stack.
+
 ## How it works
 
 - **When it runs:** when you install it, when you grant it more repositories, every Monday at 03:30 UTC, and whenever someone with write access comments `/repowatch run` on the report issue.
